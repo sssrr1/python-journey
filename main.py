@@ -1,10 +1,9 @@
 import random
-import string
 
-# পাইথনকে বলছি পাসওয়ার্ডে কী কী থাকবে (অক্ষর, সংখ্যা ও চিহ্ন)
-উপাদান = string.ascii_letters + string.digits + string.punctuation
+# কিছু চেনা শব্দ যা মনে রাখা সহজ
+words = ["baaler", "password", "kothin", "mama", "coding", "python", "safari"]
 
-# পাইথন নিজ দায়িত্বে ৮ অক্ষরের একটা কঠিন পাসওয়ার্ড বানাবে
-পাসওয়ার্ড = "".join(random.choice(উপাদান) for i in range(8))
+# পাইথন নিজে থেকে ৩টি শব্দ বেছে নিয়ে মাঝখানে '-' দিয়ে জোড়া দেবে
+my_passphrase = "-".join(random.choice(words) for i in range(3))
 
-print("মামা, আপনার আজকের সিক্রেট পাসওয়ার্ড হলো:", পাসওয়ার্ড)
+print("Your easy but secure password is:", my_passphrase)
